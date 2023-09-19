@@ -3,9 +3,9 @@
 
 
 ## team members 
-Sabreen Binsalman 2112235
-Maya Kroma 2010680
-Lama Albakri 2010684
+-Sabreen Binsalman 2112235
+-Maya Kroma 2010680
+-Lama Albakri 2010684
 
 we found some issues in this code 
 - The constructor name different from the class name 
