@@ -1,7 +1,9 @@
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
-public class SensorDataProcessor
-{
+import java.io.IOException;
+
+public class SensorDataProcessor {
 // Senson data and limits.
 
     public double[][][] data;
@@ -15,9 +17,8 @@ public class SensorDataProcessor
 // calculates average of sensor data
 
     private double average(double[] array) {
-        int i = 0;
         double val = 0;
-        for (i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             val += array[i];
         }
         return val / array.length;
@@ -47,9 +48,7 @@ public class SensorDataProcessor
                                 && average(data[i][j]) < data2[i][j][k] && (i + 1)
                                 * (j + 1) > 0) {
                             data2[i][j][k] *= 2;
-                        } else {
-                            continue;
-                        }
+                        } 
                     }
                 }
             }
@@ -59,8 +58,8 @@ public class SensorDataProcessor
                 }
             }
             out.close();
-        } catch (Exception e) {
-            System.out.println("Error= " + e);
+        } catch (IOException e) {
+            System.out.println("Error= " + e.getMessage());
         }
     }
 }
